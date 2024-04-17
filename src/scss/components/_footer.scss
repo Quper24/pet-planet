@@ -1,0 +1,62 @@
+@use "../variables" as *;
+
+.footer {
+  padding: 80px 0 32px;
+  background-color: $green;
+  background-image: url("/img/paw.svg");
+  background-repeat: no-repeat;
+  color: $light;
+  background-position: 41vw 50px;
+
+  &__container {
+    display: grid;
+    grid-template-areas:
+      "logo contacts"
+      "info contacts";
+  }
+
+  &__logo {
+    grid-area: logo;
+    width: 331px;
+  }
+
+  &__info {
+    grid-area: info;
+  }
+
+  &__copyright {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  &__item {
+    margin-bottom: 3px;
+    font-size: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contacts {
+    grid-area: contacts;
+    justify-self: end;
+    font-style: normal;
+  }
+
+  &__email {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  &__social-list {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
