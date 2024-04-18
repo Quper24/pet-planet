@@ -1,5 +1,15 @@
+@use "media" as *;
+
 :root {
   --font-size: 24px;
+
+  @include laptop {
+    --font-size: 20px;
+  }
+
+  @include mobile {
+    --font-size: 16px;
+  }
 }
 
 $font-family: "Onest", sans-serif;
