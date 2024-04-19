@@ -78,6 +78,11 @@ p {
   padding: 0 52px;
   margin: 0 auto;
 
+  @include bigscreen {
+    max-width: 1600px;
+    padding: 0 60px;
+  }
+
   @include tablet {
     padding: 0 46px;
   }

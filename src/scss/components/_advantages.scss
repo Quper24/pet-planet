@@ -9,9 +9,9 @@
     border-radius: 300px 300px 0 0;
     background-color: $carrot;
     background-image: url("/img/pattern.svg");
-    background-size: cover;
+
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     padding: 100px 0;
 
     @include laptop {
@@ -86,14 +86,38 @@
 
   &__item_assortment {
     background-image: url("/img/assortment.png");
+    background-image: image-set(
+      url("/img/assortment.avif") type("image/avif") 1x,
+      url("/img/assortment@2x.avif") type("image/avif") 2x,
+      url("/img/assortment.webp") type("image/webp") 1x,
+      url("/img/assortment@2x.webp") type("image/webp") 2x,
+      url("/img/assortment.png") type("image/png") 1x,
+      url("/img/assortment@2x.png") type("image/png") 2x
+    );
   }
 
   &__item_quality {
     background-image: url("/img/quality.png");
+    background-image: image-set(
+      url("/img/quality.avif") type("image/avif") 1x,
+      url("/img/quality@2x.avif") type("image/avif") 2x,
+      url("/img/quality.webp") type("image/webp") 1x,
+      url("/img/quality@2x.webp") type("image/webp") 2x,
+      url("/img/quality.png") type("image/png") 1x,
+      url("/img/quality@2x.png") type("image/png") 2x
+    );
   }
 
   &__item_personal {
     background-image: url("/img/personal.png");
+    background-image: image-set(
+      url("/img/personal.avif") type("image/avif") 1x,
+      url("/img/personal@2x.avif") type("image/avif") 2x,
+      url("/img/personal.webp") type("image/webp") 1x,
+      url("/img/personal@2x.webp") type("image/webp") 2x,
+      url("/img/personal.png") type("image/png") 1x,
+      url("/img/personal@2x.png") type("image/png") 2x
+    );
   }
 
   &__subtitle {
@@ -128,6 +152,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @include bigscreen {
+      left: calc(50% - 840px);
+    }
 
     @include laptop {
       width: 257px;
@@ -178,8 +206,20 @@
     top: -338px;
     right: 0;
     background-image: url("/img/dog.png");
+    background-image: image-set(
+      url("/img/dog.avif") type("image/avif") 1x,
+      url("/img/dog@2x.avif") type("image/avif") 2x,
+      url("/img/dog.webp") type("image/webp") 1x,
+      url("/img/dog@2x.webp") type("image/webp") 2x,
+      url("/img/dog.png") type("image/png") 1x,
+      url("/img/dog@2x.png") type("image/png") 2x
+    );
     background-size: contain;
     z-index: -1;
+
+    @include bigscreen {
+      right: calc(50% - 840px);
+    }
 
     @include laptop {
       width: 272px;
